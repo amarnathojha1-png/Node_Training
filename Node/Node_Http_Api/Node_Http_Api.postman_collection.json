@@ -1,0 +1,535 @@
+{
+  "info": {
+    "_postman_id": "3f6bb700-5452-4241-ae20-6e15f5f3c9a3",
+    "name": "Node_Http_Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58653030",
+    "_collection_link": "https://go.postman.co/collection/58653030-3f6bb700-5452-4241-ae20-6e15f5f3c9a3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}users",
+          "host": [
+            "{{URL}}users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Users",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}users",
+              "host": [
+                "{{URL}}users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 16:00:37 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Amar\",\n    \"role\": \"admin\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Harshit\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Harsh\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Lucky\",\n    \"role\": \"admin\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Abhinav\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 7,\n    \"name\": \"Abhinay\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 8,\n    \"name\": \"Abhay\",\n    \"role\": \"admin\"\n  },\n  {\n    \"id\": 9,\n    \"name\": \"Purav\",\n    \"role\": \"member\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get User by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}users/1",
+          "host": [
+            "{{URL}}users"
+          ],
+          "path": [
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get User by id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}users/1",
+              "host": [
+                "{{URL}}users"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 16:05:06 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 1,\n  \"name\": \"Amar\",\n  \"role\": \"admin\"\n}"
+        },
+        {
+          "name": "Get User by id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}users/4",
+              "host": [
+                "{{URL}}users"
+              ],
+              "path": [
+                "4"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 16:05:27 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"error\": \"User not found\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Abhay\",\"role\":\"admin\"}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}users",
+          "host": [
+            "{{URL}}users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Abhinay\",\"role\":\"member\"}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}users",
+              "host": [
+                "{{URL}}users"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 15:56:51 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 7,\n  \"name\": \"Abhinay\",\n  \"role\": \"member\"\n}"
+        },
+        {
+          "name": "Add User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Abhay\",\"role\":\"admin\"}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}users",
+              "host": [
+                "{{URL}}users"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 15:57:23 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 8,\n  \"name\": \"Abhay\",\n  \"role\": \"admin\"\n}"
+        },
+        {
+          "name": "Add User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Abhay\",\"role\":\"admin\"}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}users",
+              "host": [
+                "{{URL}}users"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 15:57:34 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 9,\n  \"name\": \"Purav\",\n  \"role\": \"member\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}users/4",
+          "host": [
+            "{{URL}}users"
+          ],
+          "path": [
+            "4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete User",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}users/4",
+              "host": [
+                "{{URL}}users"
+              ],
+              "path": [
+                "4"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 16:00:13 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "Get User Role",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}users?role=member",
+          "host": [
+            "{{URL}}users"
+          ],
+          "query": [
+            {
+              "key": "role",
+              "value": "member"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get User Role",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}users?role=admin",
+              "host": [
+                "{{URL}}users"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "admin"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 16:09:28 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Amar\",\n    \"role\": \"admin\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Lucky\",\n    \"role\": \"admin\"\n  },\n  {\n    \"id\": 8,\n    \"name\": \"Abhay\",\n    \"role\": \"admin\"\n  }\n]"
+        },
+        {
+          "name": "Get User Role",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}users?role=member",
+              "host": [
+                "{{URL}}users"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "member"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 16:10:27 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 2,\n    \"name\": \"Harshit\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Harsh\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Abhinav\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 7,\n    \"name\": \"Abhinay\",\n    \"role\": \"member\"\n  },\n  {\n    \"id\": 9,\n    \"name\": \"Purav\",\n    \"role\": \"member\"\n  }\n]"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL",
+      "value": "http://localhost:3000/"
+    }
+  ]
+}
